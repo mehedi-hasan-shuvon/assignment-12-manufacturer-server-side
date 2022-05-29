@@ -6,7 +6,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 app.use(cors());
 app.use(express.json());
@@ -303,7 +303,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Hello from doctor uncle')
+    res.send('Hello from hdd server')
 })
 
 app.listen(port, () => {
